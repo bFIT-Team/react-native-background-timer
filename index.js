@@ -76,10 +76,11 @@ class BackgroundTimer {
   }
 
   clearTimeout(timeoutId) {
-    if (this.callbacks[timeoutId]) {
-      delete this.callbacks[timeoutId];
+    this.callbacks = {};
+    //if (this.callbacks[timeoutId]) {
+      //delete this.callbacks[timeoutId];
       // RNBackgroundTimer.clearTimeout(timeoutId);
-    }
+    //}
   }
 
   setInterval(callback, timeout) {
